@@ -23,10 +23,21 @@ pkill -f "next dev"
 
 ## Environment Variables
 
+The following environment variables are automatically provided by Tesslate Studio:
+
+```env
+VITE_BASE_PATH=/preview/user1-project5  # Auto-generated path prefix for routing
+NODE_ENV=development                     # Development mode
+PORT=3000                                # Server port
+```
+
+You can also define custom variables:
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3000/api
-NODE_ENV=development
 ```
+
+**Note**: `VITE_BASE_PATH` is automatically set by Tesslate and used by `next.config.js` for the `basePath` configuration. This allows your Next.js app to work correctly when deployed under a path prefix.
 
 ## Project Structure
 
