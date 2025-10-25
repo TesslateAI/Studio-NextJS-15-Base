@@ -1,12 +1,33 @@
-# Next.js 15 Fullstack Base
+# TESSLATE.md - Project Context
 
-Modern Next.js 15 starter with App Router, React Server Components, API routes, TypeScript, and Tailwind CSS.
+> Context for AI agents working on this project.
 
 ## Framework Configuration
 
 **Framework**: Next.js
 **Version**: 15.x
 **Port**: 3000
+
+**Tech Stack:**
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- App Router
+
+## File Structure
+
+```
+app/
+├── api/                 # API routes
+├── components/          # React components
+├── layout.tsx           # Root layout
+└── page.tsx             # Home page
+public/                  # Static assets
+styles/                  # Global styles
+next.config.js           # Next.js config
+tailwind.config.js       # Tailwind config
+```
 
 ## Development Server
 
@@ -16,82 +37,8 @@ npm install
 npm run dev -- --hostname 0.0.0.0 --port 3000
 ```
 
-**Stop Command**:
+**Production Build**:
 ```bash
-pkill -f "next dev"
+npm run build
+npm start
 ```
-
-## Environment Variables
-
-The following environment variables are automatically provided by Tesslate Studio:
-
-```env
-NODE_ENV=development                     # Development mode
-PORT=3000                                # Server port
-```
-
-You can also define custom variables:
-
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3000/api
-```
-
-**Note**: Projects are accessed via subdomain routing (e.g., `your-project.studio.localhost`), so no base path configuration is needed.
-
-## Project Structure
-
-```
-/app                    # Next.js App Router
-  /api                 # API Routes
-  /components          # React Components
-  layout.tsx           # Root Layout
-  page.tsx             # Home Page
-/public                # Static Assets
-/styles                # Global Styles
-next.config.js         # Next.js Configuration
-package.json           # Dependencies
-tsconfig.json          # TypeScript Config
-tailwind.config.js     # Tailwind Config
-```
-
-## Features
-
-- **App Router**: Modern Next.js routing with file-based navigation
-- **API Routes**: Built-in backend API endpoints
-- **React Server Components**: Automatic code splitting and streaming
-- **TypeScript**: Full type safety
-- **Tailwind CSS**: Utility-first styling
-- **Hot Reload**: Instant updates during development
-
-## Tech Stack
-
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- PostCSS
-
-## Getting Started
-
-1. The development server will start automatically
-2. Access your app at the preview URL
-3. Edit files in `/app` to see changes instantly
-4. Create API routes in `/app/api/`
-
-## Example API Route
-
-Create `/app/api/hello/route.ts`:
-
-```typescript
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  return NextResponse.json({ message: 'Hello from Next.js API!' });
-}
-```
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Next.js 15 Release Notes](https://nextjs.org/blog/next-15)
-- [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
